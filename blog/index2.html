@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="noticia">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Blogzao</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarExample01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Sobre</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <main class="my-5">
+        <div>
+            <div class="container">
+              <div class="row text-center" ng-controller="RestNoticia">
+                <div class="col-12">
+                  <h1 class="fs-1 text-white p-5 text-center">{{ publicacoes.title }}</h1>
+                  <div class="text-bg">
+                    <img class="img-fluid pb-5" ng-src="https://api-fake-blog.herokuapp.com{{ publicacoes.thumbImage }}">
+                    <p class="fs-5 text-white text-center" id="texto">{{ publicacoes.description }}</p>
+                    <p class="fs-6 text-white text-center" id="texto">{{ publicacoes.profileName }}</p>
+                    <p class="fs-6 text-white text-center" id="texto" >{{ publicacoes.postDate }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container text-center">
+              <a href="./index.html"><button type="button" class="btn btn-primary">Voltar</button></a>
+            </div>
+          </div>
+    </main>
+    <footer class="bg-light text-lg-start">
+        <hr class="m-0" />
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+         Blog da aula do Diego
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>

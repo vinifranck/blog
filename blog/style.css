@@ -1,0 +1,40 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.imgfoda{
+  width: 3vw;
+  height: 250px; 
+  object-fit: cover;
+}
+
+.bg-clean{
+  background-color: #121212;
+}
+.bg-not{
+  background-color: rgb(79, 79, 79);
+}
+
+.text-size{
+  font-size: 1vw;
+}
+.text-bg{
+  background-color: rgba(99, 99, 99, 0.7);
+  border-radius: 20px!important;
+}
+.texto{
+  display:block;
+  margin: 10vw;
+}
+@media (max-width: 450px)
+{
+  .text-size{
+      font-size: 4vw;
+}
+}
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
